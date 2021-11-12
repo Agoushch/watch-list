@@ -3,9 +3,16 @@
 </div>
 
 <div class="container">
-<% @lists.each do |list| %>
-<div class="card"><%= link_to list.name, list_path(list) %></div>
-<% end %>
+  <% @lists.each do |list| %>
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= link_to list.name, list_path(list) %></li>
+      </ul>
+  <% end %>
 </div>
 
-<%= link_to 'New list', new_list_path %>
+
+
+<div class="btn btn-secondary">
+  <%= link_to 'New list', new_list_path %>
+</div>

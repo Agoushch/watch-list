@@ -1,4 +1,5 @@
 <%= simple_form_for(@list, class: 'form') do |f| %>
   <%= f.input :name, label: 'Give a name to your list', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
